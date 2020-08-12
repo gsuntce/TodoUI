@@ -1,0 +1,19 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <h2>
+        Login to the Todo application
+      </h2>
+    </div>
+    <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="username" [(ngModel)]="username" placeholder="login">
+      <input type="password" id="password" class="fadeIn third" name="password" [(ngModel)]="password" placeholder="password">
+      <input type="button" class="fadeIn fourth" value="Log In" (click)=handleLogin()>
+    </form>
+    <div id="formFooter">
+      <a class="underlineHover" href="#">New User Sign Up</a>
+    </div>
+
+  </div>
+</div>
